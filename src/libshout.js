@@ -8,7 +8,7 @@ let shout_tPtr = exports.shout_tPtr = ref.refType(shout_t);
 let shout_metadata_t = exports.shout_metadata_t = voidPtr;
 let shout_metadata_tPtr = exports.shout_metadata_tPtr = ref.refType(shout_metadata_t);
 
-module.exports = new FFI.Library('libshout', {
+module.exports = new FFI.Library('../lib/libshout.dll', {
 	shout_init: [ref.types.void, []],
 	shout_shutdown: [ref.types.void, []],
 	shout_version: [ref.types.CString, [
